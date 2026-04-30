@@ -29,16 +29,16 @@ Select ONE Additional Feature to Add
         🎤 whos my favorite artist?
  
         <select id="movie-answer">
-          <option value="movie1">Michael Jackson</option>
-          <option value="movie2">Beyonce</option>
-          <option value="movie3">Tyla</option>
-          <option value="movie4">Chris Brown</option>
+          <option value="artist1">Michael Jackson</option>
+          <option value="artist2">Beyonce</option>
+          <option value="artist3">Tyla</option>
+          <option value="artist4">Chris Brown</option>
         </select>
       </label>
       <button type="submit">✅/❌</button>
     </form>
     <div id="movie-result">
-      <img  class="hehe"
+      <img  class="artistpicture"
       width="280">
 
       
@@ -49,7 +49,7 @@ Select ONE Additional Feature to Add
     <!-- Book Question -->
     <form id="book-form">
       <label>
-        📖 What is my favorite book?
+        🩰 whats my favorite genre of dance?
         <select id="book-answer">
           <option value="book1">book 1</option>
           <option value="book2">book 2</option>
@@ -72,13 +72,26 @@ Select ONE Additional Feature to Add
         var $answer = $("#movie-answer");
         var answer = $answer.val();
 
-        if (answer === "movie1") {
-          $("#movie-text").text("YESSSS!");
-          $(".hehe").attr("src","https://upload.wikimedia.org/wikipedia/commons/b/b7/Beyonc%C3%A9_-_Tottenham_Hotspur_Stadium_-_1st_June_2023_%2810_of_118%29_%2852946364598%29_%28best_crop%29.jpg")
-        } 
-        else {
+        if (answer === "artist1") {
           $("#movie-text").text("Try Again!");
-          $(".hehe").attr("src","https://media.newyorker.com/photos/5b86ded37b50300447d167eb/master/pass/StFelix-Michael-Jackson.jpg")
+          $(".artistpicture").attr("src","https://media.newyorker.com/photos/5b86ded37b50300447d167eb/master/pass/StFelix-Michael-Jackson.jpg")
+         
+        } 
+        if (answer === "artist2") {
+          $("#movie-text").text("YESSSS KINGS & QUEENS");
+          $(".artistpicture").attr("src","https://upload.wikimedia.org/wikipedia/commons/b/b7/Beyonc%C3%A9_-_Tottenham_Hotspur_Stadium_-_1st_June_2023_%2810_of_118%29_%2852946364598%29_%28best_crop%29.jpg")
+        }
+      
+
+        if (answer === "artist3") {
+          $("#movie-text").text("NOPE your getting closer");
+          $(".artistpicture").attr("src","https://cdn-p.smehost.net/sites/005297e5d91d4996984e966fac4389ea/wp-content/uploads/2025/12/TylaChanel-800x800.png")
+         
+        }
+        if (answer === "artist4") {
+          $("#movie-text").text("no.. Want a hint?");
+          $(".artistpicture").attr("src","https://www.sandiegouniontribune.com/wp-content/uploads/migration/2012/02/07/00000169-0cec-dbbe-a16f-4eecbfcb0000.jpg?w=535")
+         
         }
       });
 
@@ -91,6 +104,7 @@ Select ONE Additional Feature to Add
 
         if (answer === "book1") {
           $("#book-text").text("YESSSS!");
+         
         } 
         else {
           $("#book-text").text("Try Again!");
